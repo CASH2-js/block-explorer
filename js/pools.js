@@ -43,7 +43,7 @@ var renderPoolRow = function(host, name, data, d) {
     pools_row.push('<tr>');
     pools_row.push('<td id=host-'+name+'><a target=blank href=http://'+host+'>'+name+'</a></td>');
     pools_row.push('<td class="height" id=height-'+name+'>'+localizeNumber(data.network.height)+'</td>');
-    pools_row.push('<td id=hashrate-'+name+'>'+localizeNumber(data.pool.hashrate / 10000000)+' H/s</td>');
+    pools_row.push('<td id=hashrate-'+name+'>'+localizeNumber(data.pool.hashrate / 1000000000000)+' TH/s</td>');
     pools_row.push('<td id=miners-'+name+'>'+localizeNumber(data.pool.miners)+'</td>');
     pools_row.push('<td id=totalFee-'+name+'>'+calculateTotalFee(data)+'%</td>');
     pools_row.push('<td id=minPayout-'+name+'>'+getReadableCoins(data.config.minPaymentThreshold / 10000000,2)+ '</td>');
