@@ -68,13 +68,8 @@ function localizeNumber(number) {
 }
 
 function getReadableHashRateString(hashrate){
-    var i = 0;
     var byteUnits = [' H', ' kH', ' MH', ' GH', ' TH', ' PH', ' EH', ' ZH', ' YH' ];
-    while (hashrate > 1000){
-        hashrate = hashrate / 1000;
-        i++;
-    }
-    return localizeNumber(hashrate.toFixed(2)) + byteUnits[i];
+    return localizeNumber(hashrate.toFixed(2)) + byteUnits[4];
 }
 
 function getReadableDifficultyString(difficulty, precision){

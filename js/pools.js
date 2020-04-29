@@ -130,7 +130,7 @@ var displayChart = function displayChart() {
                     label: function (tooltipItem, data) {
                         var amount = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
                         var total = eval(data.datasets[tooltipItem.datasetIndex].data.join('+'));
-                        return localizeNumber(amount) + ' / ' + localizeNumber(total) + ' H/s  (' + parseFloat(amount * 100 / total).toFixed(2) + '%)';
+                        return localizeNumber(amount / 1000000000000) + ' TH/s  (' + parseFloat(amount * 100 / total).toFixed(2) + '%)';
                     }
                 }
             }
